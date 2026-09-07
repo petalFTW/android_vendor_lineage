@@ -11,6 +11,8 @@ genrule {
     ],
     tool_files: [
         "bootanimation.tar",
+        // Track the Petal prebuilt so incremental builds pick up animation updates.
+        "petal.zip",
         "desc.txt",
         "gen-bootanimation.sh",
     ],
