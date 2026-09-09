@@ -29,6 +29,10 @@ ifeq ($(LINEAGE_BUILDTYPE), UNOFFICIAL)
     endif
 endif
 
+ifneq ($(filter petal_%,$(TARGET_PRODUCT)),)
+    include vendor/petal/build/maintainer/properties.mk
+endif
+
 LINEAGE_VERSION_SUFFIX := $(LINEAGE_BUILD_DATE)-$(LINEAGE_BUILDTYPE)$(LINEAGE_EXTRAVERSION)-$(LINEAGE_BUILD)
 
 # Internal version

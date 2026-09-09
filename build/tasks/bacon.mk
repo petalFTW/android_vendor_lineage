@@ -17,6 +17,9 @@
 # Lineage OTA update package
 
 LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/lineage-$(LINEAGE_VERSION).zip
+ifneq ($(filter petal_%,$(TARGET_PRODUCT)),)
+    LINEAGE_TARGET_PACKAGE := $(PRODUCT_OUT)/petal-$(LINEAGE_VERSION).zip
+endif
 
 SHA256 := prebuilts/build-tools/path/$(HOST_PREBUILT_TAG)/sha256sum
 

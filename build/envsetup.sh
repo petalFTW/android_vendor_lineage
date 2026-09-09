@@ -70,7 +70,10 @@ alias bib=breakfast
 function eat()
 {
     if [ "$OUT" ] ; then
-        ZIPPATH=`ls -tr "$OUT"/lineage-*.zip | tail -1`
+        ZIPPATH=`ls -tr "$OUT"/petal-*.zip 2>/dev/null | tail -1`
+        if [ ! -f "$ZIPPATH" ] ; then
+            ZIPPATH=`ls -tr "$OUT"/lineage-*.zip 2>/dev/null | tail -1`
+        fi
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
             return 1
