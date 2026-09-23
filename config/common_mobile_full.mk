@@ -12,8 +12,10 @@ PRODUCT_PACKAGES += \
     Etar \
     Profiles \
     Recorder \
-    Seedvault \
-    Twelve
+    Seedvault
+
+# The music player is provided per-product (petalOS ships PetalMusic as
+# "Music" and drops Twelve from this common list).
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
