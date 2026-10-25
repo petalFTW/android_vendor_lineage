@@ -36,6 +36,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fonts_customization.xml \
     FontGoogleSansFlexOverlay
+PRODUCT_PACKAGES += Commissioner-VF.ttf
 
 # Include Lineage LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries
